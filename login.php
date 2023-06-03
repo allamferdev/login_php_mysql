@@ -1,13 +1,6 @@
 <?php
-session_start();
 
-define('HOST', 'localhost');
-define('USER', 'root');
-define('PASS', '');
-define('DATABASE', 'sislogin');
-
-$conn = new MySQLi(HOST,USER, PASS, DATABASE);
-
+include('config.php');
 
 if(empty($_POST) or empty($_POST['usuario']) or empty($_POST['senha'])){
    print "<script>location.href='index.php'</script>";
